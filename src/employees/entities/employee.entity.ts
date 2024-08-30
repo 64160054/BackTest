@@ -1,12 +1,23 @@
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  DeleteDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
+
 @Entity()
 export class Employee {
   @PrimaryGeneratedColumn()
-  id?: number;
+  id: number;
+
   @Column({ length: 45 })
-  firstname: string;
+  name: string;
+
   @Column({ length: 45 })
-  lastname: string;
+  surname: string;
+
   @CreateDateColumn()
   createdAt: Date;
 
